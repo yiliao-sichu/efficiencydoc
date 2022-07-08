@@ -6,5 +6,5 @@
       - [Number](number.md)
       - [Array](array.md)
       - [Date](date.md)
-      - 工具类
+      - [工具类](tool.md)
   
