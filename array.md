@@ -65,8 +65,7 @@
     // 打印 {a: 14}
   ```
 
-
-  ## flat2w
+ ## flat2w
   把二维数组解析为一维数组
   ### 参数
   |参数名|是否必填|类型|备注|
@@ -74,7 +73,26 @@
   |array|是|array|你要进行解析的二维数组|
   ### 演示
   ``` js
-    // json数组寻找对象里a为14的
+    // 对数组进行扁平
     console.log(efficiency.flat2w([[1,2,3],4,5,[6,7]]));
     // 打印 [1,2,3,4,5,6,7]
+  ```
+
+
+  ## flatArray
+  把多维数组解析成一维数组,可以解析json数组
+  ### 参数
+  |参数名|是否必填|类型|备注|
+  |:-:|:-:|:-:|:----------:|
+  |array|是|array|你要进行解析的二维数组|
+  |key|否|string|你要根据key解析的json数组|
+  ### 演示
+  ``` js
+    // 对数组进行扁平，不传key值
+    console.log(efficiency.flatArray([[1,2,3],4,5,[6,7,[8,9,10]]]));
+    // 打印 [1,2,3,4,5,6,7,8,9,10]
+
+    // 对json对象进行扁平
+    console.log(efficiency.flatArray([{"label":"1","children":[{"label":"2"}]},{"label":"3","children":[{"label":"4","children":[{"label":"5"}]}]}], 'children'));
+    // 打印[{"label":"1"},{"label":"2"},{"label":"3"},{"label":"4"},{"label":"5"}] 
   ```
